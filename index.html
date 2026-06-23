@@ -138,28 +138,24 @@ async function load(){
       .then(r => r.text());
 
     const parsed = Papa.parse(csv, {
-      header: true,
-      skipEmptyLines: true,
+      header:true,
+      skipEmptyLines:true,
       transformHeader: h =>
-        h.replace(/\uFEFF/g, "").trim()
+        h.replace(/\uFEFF/g,"").trim()
     });
 
-    // HARD NORMALIZATION (fixes hidden whitespace issues)
     data = parsed.data.map(row => {
       const clean = {};
       Object.keys(row).forEach(k => {
-        clean[k.replace(/\uFEFF/g, "").trim()] = row[k];
+        clean[k.replace(/\uFEFF/g,"").trim()] = row[k];
       });
       return clean;
     });
 
-    console.log("CSV loaded:", data.length, "rows");
-    console.log("Sample row:", data[0]);
-
     buildDropdowns();
 
   } catch (err) {
-    console.error("CSV LOAD ERROR:", err);
+    console.error("FAILED TO LOAD CSV", err);
   }
 }
 
@@ -171,9 +167,7 @@ function buildDropdowns(){
   const districtSel = document.getElementById("district");
 
   const boroughs = [
-    ...new Set(
-      data.map(d => (d.Borough || "").trim())
-    )
+    ...new Set(data.map(d => (d.Borough || "").trim()))
   ].filter(Boolean).sort();
 
   boroughSel.innerHTML = `<option value="">Select borough</option>`;
@@ -235,7 +229,6 @@ function renderBallot(){
 
     let candidates = r.candidates;
 
-    // handle stringified arrays safely
     if (typeof candidates === "string") {
       try {
         candidates = JSON.parse(candidates.replace(/'/g,'"'));
