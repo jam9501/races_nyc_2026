@@ -133,7 +133,6 @@ select, button{
 let data = [];
 
 // ---------------------- LOAD CSV ----------------------
-
 async function load(){
 
   try {
@@ -148,7 +147,7 @@ async function load(){
         h.replace(/\uFEFF/g,"").trim()
     });
 
-    // HARD NORMALIZATION (fixes hidden whitespace bugs)
+    // HARD NORMALIZATION
     data = parsed.data.map(row => {
       const clean = {};
       Object.keys(row).forEach(k => {
@@ -156,6 +155,15 @@ async function load(){
       });
       return clean;
     });
+
+    console.log("SAMPLE ROW:", data[0]);
+
+    buildDropdowns();
+
+  } catch (err) {
+    console.error("CSV LOAD ERROR:", err);
+  }
+}
 
     
 
