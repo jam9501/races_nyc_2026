@@ -133,22 +133,21 @@ let data = [];
 
 // ---------------------- LOAD CSV ----------------------
 
-async function load(){
-
+aasync function load() {
   const csv = await fetch("races_clean.csv")
     .then(r => r.text());
 
   const parsed = Papa.parse(csv, {
-    header:true,
-    skipEmptyLines:true,
+    header: true,
+    skipEmptyLines: true,
     transformHeader: h =>
-      h.replace(/\uFEFF/g,"").trim()
+      h.replace(/\uFEFF/g, "").trim()
   });
 
   data = parsed.data.map(row => {
     const clean = {};
     Object.keys(row).forEach(k => {
-      clean[k.replace(/\uFEFF/g,"").trim()] = row[k];
+      clean[k.replace(/\uFEFF/g, "").trim()] = row[k];
     });
     return clean;
   });
@@ -156,8 +155,7 @@ async function load(){
   buildDropdowns();
 }
 
-  } 
-}
+load();
 
 // ---------------------- BUILD DROPDOWNS ----------------------
 
