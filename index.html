@@ -124,6 +124,7 @@ select, button{
 
 </div>
 
+<>
 <script>
 
 let data = [];
@@ -131,25 +132,36 @@ let data = [];
 // ---------------------- LOAD CSV ----------------------
 
 async function load() {
-  const csv = await fetch("races_clean.csv")
-    .then(r => r.text());
+  try {
+    const res = await fetch("races_clean.csv", { cache: "no-store" });
 
-  const parsed = Papa.parse(csv, {
-    header: true,
-    skipEmptyLines: true,
-    transformHeader: h =>
-      h.replace(/\uFEFF/g, "").trim()
-  });
+    if (!res.ok) throw new Error("HTTP " + res.status);
 
-  data = parsed.data.map(row => {
-    const clean = {};
-    Object.keys(row).forEach(k => {
-      clean[k.replace(/\uFEFF/g, "").trim()] = row[k];
+    const csv = await res.text();
+
+    const parsed = Papa.parse(csv, {
+      header: true,
+      skipEmptyLines: true,
+      transformHeader: h =>
+        h.replace(/\uFEFF/g, "").trim()
     });
-    return clean;
-  });
 
-  buildDropdowns();
+    data = parsed.data.map(row => {
+      const clean = {};
+      Object.keys(row).forEach(k => {
+        clean[k.replace(/\uFEFF/g, "").trim()] = row[k];
+      });
+      return clean;
+    });
+
+    console.log("Loaded rows:", data.length);
+
+    buildDropdowns();
+  } catch (err) {
+    console.error("CSV load failed:", err);
+    document.getElementById("output").innerHTML =
+      "<p style='color:red'>Failed to load races_clean.csv</p>";
+  }
 }
 
 load();
@@ -165,7 +177,7 @@ function buildDropdowns(){
     data.map(d => (d.Borough || "").trim())
   )].filter(Boolean).sort();
 
-  boroughSel.innerHTML = `<option value="">Select borough</option>`;
+  boroughSel.innerHTML = `<option value="">All boroughs</option>`;
 
   boroughs.forEach(b => {
     const opt = document.createElement("option");
@@ -178,15 +190,17 @@ function buildDropdowns(){
 
     const borough = boroughSel.value;
 
-    const filtered = data.filter(d =>
-      (d.Borough || "").trim() === borough
-    );
+    const filtered = borough
+      ? data.filter(d => (d.Borough || "").trim() === borough)
+      : data;
 
     const districts = [...new Set(
-      filtered.map(d => String(d.district_id || "").trim())
-    )].filter(Boolean).sort((a,b)=>Number(a)-Number(b));
+      filtered.map(d => (d.district_id ?? "").toString().trim())
+    )]
+    .filter(d => d !== "")
+    .sort((a,b)=>Number(a)-Number(b));
 
-    districtSel.innerHTML = `<option value="">Select district</option>`;
+    districtSel.innerHTML = `<option value="">All districts</option>`;
 
     districts.forEach(d => {
       const opt = document.createElement("option");
@@ -197,6 +211,28 @@ function buildDropdowns(){
   };
 }
 
+// ---------------------- SAFE CANDIDATE PARSING ----------------------
+
+function parseCandidates(raw) {
+  if (!raw) return [];
+
+  if (Array.isArray(raw)) return raw;
+
+  if (typeof raw === "string") {
+    try {
+      // try JSON first
+      return JSON.parse(raw.replace(/'/g, '"'));
+    } catch {
+      // fallback: split but avoid breaking names too badly
+      return raw.split("||").length > 1
+        ? raw.split("||")
+        : raw.split(",").map(s => s.trim());
+    }
+  }
+
+  return [];
+}
+
 // ---------------------- RENDER BALLOT ----------------------
 
 function renderBallot(){
@@ -204,10 +240,28 @@ function renderBallot(){
   const borough = document.getElementById("borough").value;
   const district = document.getElementById("district").value;
 
-  const filtered = data.filter(d =>
-    (d.Borough || "").trim() === borough &&
-    String(d.district_id).trim() === String(district)
-  );
+  let filtered = data;
+
+  // optional borough filter
+  if (borough) {
+    filtered = filtered.filter(d =>
+      (d.Borough || "").trim() === borough
+    );
+  }
+
+  // optional district filter (BUT DO NOT EXCLUDE STATEWIDE RACES)
+  if (district) {
+    filtered = filtered.filter(d => {
+      const rowDistrict = (d.district_id ?? "").toString().trim();
+
+      const isStatewide =
+        rowDistrict === "" ||
+        rowDistrict.toUpperCase() === "STATEWIDE" ||
+        rowDistrict.toUpperCase() === "AT-LARGE";
+
+      return rowDistrict === district || isStatewide;
+    });
+  }
 
   if(filtered.length === 0){
     document.getElementById("output").innerHTML =
@@ -215,29 +269,30 @@ function renderBallot(){
     return;
   }
 
-  let html = `<h2>${borough} · District ${district}</h2>`;
+  let html = `<h2>${borough || "All Boroughs"} · ${district ? "District " + district : "All Districts"}</h2>`;
 
   filtered.forEach(r => {
 
-    let candidates = r.candidates;
+    const candidates = parseCandidates(r.candidates);
 
-    if (typeof candidates === "string") {
-      try {
-        candidates = JSON.parse(candidates.replace(/'/g,'"'));
-      } catch {
-        candidates = candidates.split(",");
-      }
-    }
+    const office = r["Office / Contest"] || "Unknown Office";
+
+    const districtLabel = r.district_label || "";
+
+    const rowDistrict = (r.district_id ?? "").toString().trim();
+    const scope = rowDistrict
+      ? `District ${rowDistrict}`
+      : "Statewide / At-Large";
 
     html += `
       <div class="card">
 
         <div class="office">
-          ${r["Office / Contest"]}
+          ${office}
         </div>
 
         <div class="meta">
-          ${r.district_label || ""}
+          ${districtLabel} · ${scope}
         </div>
 
         <span class="badge ${
@@ -257,7 +312,7 @@ function renderBallot(){
           </div>
     `;
 
-    (candidates || []).forEach(c => {
+    candidates.forEach(c => {
       html += `
         <div class="candidate">
           <span class="circle"></span>
@@ -273,6 +328,5 @@ function renderBallot(){
 }
 
 </script>
-
 </body>
 </html>
