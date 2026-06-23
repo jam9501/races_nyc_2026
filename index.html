@@ -97,14 +97,6 @@ select, button{
   border-radius:50%;
 }
 
-.debug{
-  background:#fff3cd;
-  border:1px solid #ffeeba;
-  padding:10px;
-  margin-bottom:20px;
-  font-size:13px;
-  white-space:pre-wrap;
-}
 </style>
 </head>
 
@@ -143,35 +135,26 @@ let data = [];
 
 async function load(){
 
-  try {
+  const csv = await fetch("races_clean.csv")
+    .then(r => r.text());
 
-    const csv = await fetch("races_clean.csv")
-      .then(r => r.text());
+  const parsed = Papa.parse(csv, {
+    header:true,
+    skipEmptyLines:true,
+    transformHeader: h =>
+      h.replace(/\uFEFF/g,"").trim()
+  });
 
-    const parsed = Papa.parse(csv, {
-      header:true,
-      skipEmptyLines:true,
-      transformHeader: h =>
-        h.replace(/\uFEFF/g,"").trim()
+  data = parsed.data.map(row => {
+    const clean = {};
+    Object.keys(row).forEach(k => {
+      clean[k.replace(/\uFEFF/g,"").trim()] = row[k];
     });
+    return clean;
+  });
 
-    // HARD NORMALIZATION (fixes hidden whitespace bugs)
-    data = parsed.data.map(row => {
-      const clean = {};
-      Object.keys(row).forEach(k => {
-        clean[k.replace(/\uFEFF/g,"").trim()] = row[k];
-      });
-      return clean;
-    });
-
-    document.getElementById("debug").textContent =
-      "CSV loaded successfully\n" +
-      "Rows: " + data.length + "\n" +
-      "Columns: " + Object.keys(data[0] || {}).join(", ") + "\n";
-
-    console.log("SAMPLE ROW:", data[0]);
-
-    buildDropdowns();
+  buildDropdowns();
+}
 
   } 
 }
@@ -189,7 +172,7 @@ function buildDropdowns(){
     )
   ].filter(Boolean).sort();
 
-  document.getElementById("debug").textContent +=
+
     "\nBoroughs found: " + boroughs.join(", ");
 
   boroughSel.innerHTML = `<option value="">Select borough</option>`;
@@ -215,7 +198,7 @@ function buildDropdowns(){
     .filter(Boolean)
     .sort((a,b)=>Number(a)-Number(b));
 
-    document.getElementById("debug").textContent +=
+    
       "\nDistricts for " + borough + ": " + districts.join(", ");
 
     districtSel.innerHTML =
