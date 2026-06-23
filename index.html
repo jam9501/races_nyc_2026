@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>NYC Ballot Explorer</title>
+
+<script src="https://unpkg.com/papaparse@5.4.1/papaparse.min.js"></script>
+
+<style>
+body{
+  margin:0;
+  font-family: Georgia, serif;
+  background:#f5f5f2;
+  color:#111;
+}
+
+.container{
+  max-width:1000px;
+  margin:0 auto;
+  padding:40px 20px;
+}
+
+h1{ font-size:48px; margin-bottom:10px; }
+
+p{ color:#555; }
+
+.filters{
+  display:flex;
+  gap:12px;
+  margin:20px 0 30px;
+  flex-wrap:wrap;
+}
+
+select, button{
+  padding:10px;
+  font-size:16px;
+}
+
+.card{
+  background:#fff;
+  border:1px solid #ddd;
+  padding:20px;
+  margin-bottom:16px;
+}
+
+.office{
+  font-size:22px;
+  font-weight:700;
+}
+
+.meta{
+  color:#666;
+  font-size:13px;
+  margin:6px 0 12px;
+}
+
+.badge{
+  display:inline-block;
+  padding:4px 10px;
+  border-radius:999px;
+  border:1px solid #aaa;
+  font-size:12px;
+}
+
+.contested{
+  background:#111;
+  color:#fff;
+  border-color:#111;
+}
+
+.ballot{
+  border:2px solid #111;
+  background:#fafafa;
+  padding:14px;
+  margin-top:10px;
+}
+
+.ballot-title{
+  text-align:center;
+  font-size:12px;
+  letter-spacing:.12em;
+  margin-bottom:10px;
+  font-weight:700;
+}
+
+.candidate{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin:8px 0;
+}
+
+.circle{
+  width:14px;
+  height:14px;
+  border:2px solid #111;
+  border-radius:50%;
+}
+
+.debug{
+  background:#fff3cd;
+  border:1px solid #ffeeba;
+  padding:10px;
+  margin-bottom:20px;
+  font-size:13px;
+  white-space:pre-wrap;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>NYC Ballot Explorer</h1>
+<p>Select borough and district.</p>
+
+<div id="debug" class="debug">Loading...</div>
+
+<div class="filters">
+
+  <select id="borough">
+    <option value="">Select borough</option>
+  </select>
+
+  <select id="district">
+    <option value="">Select district</option>
+  </select>
+
+  <button onclick="renderBallot()">Show Ballot</button>
+
+</div>
+
+<div id="output"></div>
+
+</div>
+
+<script>
+
+let data = [];
+
+// ---------------------- LOAD CSV ----------------------
+
+async function load(){
+
+  try {
+
+    const csv = await fetch("races_clean.csv")
+      .then(r => r.text());
+
+    const parsed = Papa.parse(csv, {
+      header:true,
+      skipEmptyLines:true,
+      transformHeader: h =>
+        h.replace(/\uFEFF/g,"").trim()
+    });
+
+    // HARD NORMALIZATION (fixes hidden whitespace bugs)
+    data = parsed.data.map(row => {
+      const clean = {};
+      Object.keys(row).forEach(k => {
+        clean[k.replace(/\uFEFF/g,"").trim()] = row[k];
+      });
+      return clean;
+    });
+
+    document.getElementById("debug").textContent =
+      "CSV loaded successfully\n" +
+      "Rows: " + data.length + "\n" +
+      "Columns: " + Object.keys(data[0] || {}).join(", ") + "\n";
+
+    console.log("SAMPLE ROW:", data[0]);
+
+    buildDropdowns();
+
+  } catch (err) {
+    document.getElementById("debug").textContent =
+      "❌ FAILED TO LOAD CSV\n\n" + err;
+  }
+}
+
+// ---------------------- BUILD DROPDOWNS ----------------------
+
+function buildDropdowns(){
+
+  const boroughSel = document.getElementById("borough");
+  const districtSel = document.getElementById("district");
+
+  const boroughs = [
+    ...new Set(
+      data.map(d => (d.Borough || "").trim())
+    )
+  ].filter(Boolean).sort();
+
+  document.getElementById("debug").textContent +=
+    "\nBoroughs found: " + boroughs.join(", ");
+
+  boroughSel.innerHTML = `<option value="">Select borough</option>`;
+
+  boroughs.forEach(b => {
+    const opt = document.createElement("option");
+    opt.value = b;
+    opt.textContent = b;
+    boroughSel.appendChild(opt);
+  });
+
+  boroughSel.onchange = () => {
+
+    const borough = boroughSel.value;
+
+    const filtered = data.filter(d =>
+      (d.Borough || "").trim() === borough
+    );
+
+    const districts = [
+      ...new Set(filtered.map(d => d.district_id))
+    ]
+    .filter(Boolean)
+    .sort((a,b)=>Number(a)-Number(b));
+
+    document.getElementById("debug").textContent +=
+      "\nDistricts for " + borough + ": " + districts.join(", ");
+
+    districtSel.innerHTML =
+      `<option value="">Select district</option>`;
+
+    districts.forEach(d => {
+      const opt = document.createElement("option");
+      opt.value = d;
+      opt.textContent = d;
+      districtSel.appendChild(opt);
+    });
+  };
+}
+
+// ---------------------- RENDER BALLOT ----------------------
+
+function renderBallot(){
+
+  const borough = document.getElementById("borough").value;
+  const district = document.getElementById("district").value;
+
+  const filtered = data.filter(d =>
+    (d.Borough || "").trim() === borough &&
+    String(d.district_id) === String(district)
+  );
+
+  let html = `<h2>${borough} · District ${district}</h2>`;
+
+  if(filtered.length === 0){
+    document.getElementById("output").innerHTML =
+      "<p>No races found.</p>";
+    return;
+  }
+
+  filtered.forEach(r => {
+
+    let candidates = r.candidates;
+
+    // handle stringified arrays safely
+    if (typeof candidates === "string") {
+      try {
+        candidates = JSON.parse(candidates.replace(/'/g,'"'));
+      } catch {
+        candidates = candidates.split(",");
+      }
+    }
+
+    html += `
+      <div class="card">
+
+        <div class="office">
+          ${r["Office / Contest"]}
+        </div>
+
+        <div class="meta">
+          ${r.district_label}
+        </div>
+
+        <span class="badge ${
+          String(r.contested).toLowerCase() === "true"
+          ? "contested" : ""
+        }">
+          ${
+            String(r.contested).toLowerCase() === "true"
+            ? "Contested" : "Uncontested"
+          }
+        </span>
+
+        <div class="ballot">
+
+          <div class="ballot-title">
+            OFFICIAL SAMPLE BALLOT
+          </div>
+    `;
+
+    (candidates || []).forEach(c => {
+      html += `
+        <div class="candidate">
+          <span class="circle"></span>
+          ${c}
+        </div>
+      `;
+    });
+
+    html += `</div></div>`;
+  });
+
+  document.getElementById("output").innerHTML = html;
+}
+
+// ---------------------- INIT ----------------------
+
+load();
+
+</script>
+
+</body>
+</html>
