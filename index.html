@@ -96,8 +96,6 @@ select, button{
   border:2px solid #111;
   border-radius:50%;
 }
-
-
 </style>
 </head>
 
@@ -107,8 +105,6 @@ select, button{
 
 <h1>NYC Ballot Explorer</h1>
 <p>Select borough and district.</p>
-
-
 
 <div class="filters">
 
@@ -133,6 +129,7 @@ select, button{
 let data = [];
 
 // ---------------------- LOAD CSV ----------------------
+
 async function load(){
 
   try {
@@ -141,37 +138,29 @@ async function load(){
       .then(r => r.text());
 
     const parsed = Papa.parse(csv, {
-      header:true,
-      skipEmptyLines:true,
+      header: true,
+      skipEmptyLines: true,
       transformHeader: h =>
-        h.replace(/\uFEFF/g,"").trim()
+        h.replace(/\uFEFF/g, "").trim()
     });
 
-    // HARD NORMALIZATION
+    // HARD NORMALIZATION (fixes hidden whitespace issues)
     data = parsed.data.map(row => {
       const clean = {};
       Object.keys(row).forEach(k => {
-        clean[k.replace(/\uFEFF/g,"").trim()] = row[k];
+        clean[k.replace(/\uFEFF/g, "").trim()] = row[k];
       });
       return clean;
     });
 
-    console.log("SAMPLE ROW:", data[0]);
+    console.log("CSV loaded:", data.length, "rows");
+    console.log("Sample row:", data[0]);
 
     buildDropdowns();
 
   } catch (err) {
     console.error("CSV LOAD ERROR:", err);
   }
-}
-
-    
-
-    console.log("SAMPLE ROW:", data[0]);
-
-    buildDropdowns();
-
-
 }
 
 // ---------------------- BUILD DROPDOWNS ----------------------
@@ -186,8 +175,6 @@ function buildDropdowns(){
       data.map(d => (d.Borough || "").trim())
     )
   ].filter(Boolean).sort();
-
-  
 
   boroughSel.innerHTML = `<option value="">Select borough</option>`;
 
@@ -211,8 +198,6 @@ function buildDropdowns(){
     ]
     .filter(Boolean)
     .sort((a,b)=>Number(a)-Number(b));
-
-  
 
     districtSel.innerHTML =
       `<option value="">Select district</option>`;
