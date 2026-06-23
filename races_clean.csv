@@ -1,0 +1,265 @@
+Borough,Party,Office / Contest,district_type,district_id,district_label,vote_for,candidate_count,candidates,contested
+Bronx,Democratic,Alternate Delegate to the Judicial Convention,assembly,81,81st Assembly District,9,9,"['Abigail Martin', 'Izaiah Zeek Barrow', 'Stephanie Halpin', 'Miles Harris', 'Bereket Ghebremedhin', 'Stephen Friedmann', 'Graham Ciraulo', 'Jennifer Bader', 'Johnathan Wolf']",True
+Bronx,Democratic,Alternate Delegate to the Judicial Convention,assembly,81,81st Assembly District,9,9,"['Robin Weinstein', 'Fredda Tourin', 'Phyllis Roth', 'Eleanor Oliff', 'Sergio Villaverde', 'Cara Kagan', 'James Reilly', 'Michael Friedman', 'Carlton Berkley']",True
+Bronx,Democratic,County Committee,assembly,81,001/81,2,2,"['Jeannine Fetsco', 'Michael Friedman']",True
+Bronx,Democratic,County Committee,assembly,81,001/81,2,1,['Izaiah Zeek Barrow'],False
+Bronx,Democratic,County Committee,assembly,81,006/81,3,3,"['Neil Dick', 'Ross Frommer', 'Stephen J. Lief']",True
+Bronx,Democratic,County Committee,assembly,81,006/81,3,1,['Kirsten Peters'],False
+Bronx,Democratic,County Committee,assembly,81,012/81,2,2,"['Meghan Wasserman', 'Scott Wasserman']",True
+Bronx,Democratic,County Committee,assembly,81,012/81,2,2,"['Electra Sklavos', 'Anne Shahmoon']",True
+Bronx,Democratic,County Committee,assembly,81,014/81,4,4,"['Phyllis Roth', 'E. Doyle McCarthy', 'Leslie Boaz', 'Laura Fieber']",True
+Bronx,Democratic,County Committee,assembly,81,014/81,4,2,"['Miles Harris', 'Jonathan Wolf']",True
+Bronx,Democratic,County Committee,assembly,81,020/81,4,4,"['Betsey Knapp', 'Stephanie Halpin', 'Karly Rodriguez', 'Ryan Acquaotta']",True
+Bronx,Democratic,County Committee,assembly,81,020/81,4,4,"['Michael Heller', 'Maryann Monte', 'Erica Overton', 'Amelia M. Chaves']",True
+Bronx,Democratic,County Committee,assembly,81,023/81,3,3,"['Abigail Martin', 'Martin ONeill', 'Stephen Friedman']",True
+Bronx,Democratic,County Committee,assembly,81,023/81,3,3,"['Constance Kaplan', 'Elisha Ignatoff', 'Andrew Leftt']",True
+Bronx,Democratic,County Committee,assembly,81,029/81,4,4,"['Aaron Stayman', 'Jon Zeftel', 'Illiam Carrillo', 'Simone Stern']",True
+Bronx,Democratic,County Committee,assembly,81,029/81,4,4,"['Helen K. Morik', 'Ellen Feld', 'Deena Spindler', 'Susan Goldy']",True
+Bronx,Democratic,County Committee,assembly,81,030/81,4,4,"['Sylvia Gottlieb', 'William F. Weitz', 'Robert K. Malik', 'Seryl Ritter']",True
+Bronx,Democratic,County Committee,assembly,81,030/81,4,1,['Michele Roos'],False
+Bronx,Democratic,County Committee,assembly,81,037/81,4,4,"['Andrew McGowan', 'Fernanda Chaves', 'Brett Saffer', 'Sophie Fermanis']",True
+Bronx,Democratic,County Committee,assembly,81,037/81,4,2,"['Lindsay Melachrinos', 'James Melachrinos']",True
+Bronx,Democratic,County Committee,assembly,83,044/83,2,2,"['Michelle Bromfield', 'Jason Laidley']",True
+Bronx,Democratic,County Committee,assembly,83,044/83,2,1,['Shivana A. Jorawar'],False
+Bronx,Democratic,Delegate to Judicial Convention,assembly,81,81st Assembly District,9,9,"['Morgan Evers', 'Aaron Stayman', 'Karly Rodriguez', 'Jon Zeftel', 'Betsey Knapp', 'Kirsten Peters', 'Ryan Acquaotta', 'Lisa Fieldstein', 'Jacqueline Gold']",True
+Bronx,Democratic,Delegate to Judicial Convention,assembly,81,81st Assembly District,9,9,"['Eric Dinowitz', 'Teresa Colon', 'Randi Martos', 'Helen K. Morik', 'William F. Weitz', 'Emily Hausman', 'Delores Dixon', 'Daniel Flores', 'Ellen Feld']",True
+Bronx,Democratic,District Leader,party_leadership,81,Democratic Leadership District 81,2,2,"['Ben Jackson', 'Virginia Krompinger']",True
+Bronx,Democratic,District Leader,party_leadership,81,Democratic Leadership District 81,2,2,"['Abigail Martin', 'Izaiah Zeek Barrow']",True
+Bronx,Democratic,District Leader,party_leadership,84,Democratic Leadership District 84,2,2,"['Freddy Perez Jr.', 'Amanda N. Septimo']",True
+Bronx,Democratic,District Leader,party_leadership,84,Democratic Leadership District 84,2,2,"['Hector Feliciano', 'Yolanda Garcia']",True
+Bronx,Democratic,District Leader,party_leadership,84,Democratic Leadership District 84,2,1,['Cecil K. Brooks Jr.'],False
+Bronx,Democratic,Member of the Assembly,assembly,81,81st Assembly District,1,2,"['Jeffrey Dinowitz', 'Morgan Evers']",True
+Bronx,Democratic,Member of the Assembly,assembly,82,82nd Assembly District,1,3,"['Jake Kuhl 61E Edgewater Park Bronx, NY', 'Felix Omozusi', 'Michael R. Benedetto']",True
+Bronx,Democratic,Member of the Assembly,assembly,84,84th Assembly District,1,3,"['Courtland W. Hankins', 'Amanda N. Septimo', 'Hector Feliciano']",True
+Bronx,Democratic,Member of the Assembly,assembly,87,87th Assembly District,1,2,"['Karines Reyes', 'Zakir Choudhury']",True
+Bronx,Democratic,Representative in Congress,congress,13,13th Congressional District,1,4,"['Oscar J. Romero Jr.', 'Theo Bruce Chino-Tavarez', 'Darializa Avila Chevalier', 'Adriano Espaillat']",True
+Bronx,Democratic,Representative in Congress,congress,14,14th Congressional District,1,3,"['Alexandria Ocasio-Cortez', 'Felipe Garcia', 'Marty Dolan']",True
+Bronx,Democratic,Representative in Congress,congress,15,15th Congressional District,1,3,"['Ritchie Torres', 'Jose Vega', 'Michael Blake']",True
+Bronx,Democratic,State Committee,assembly,81,81st Assembly District,2,2,"['Michael Heller', 'Johanna Edmondson']",True
+Bronx,Democratic,State Committee,assembly,81,81st Assembly District,2,2,"['Bereket Ghebremedhin', 'Betsey Knapp']",True
+Bronx,Democratic,State Comptroller,citywide,,Citywide,1,3,"['Thomas P. DiNapoli', 'Drew Warshaw', 'Raj Goyle']",True
+Bronx,Democratic,State Senator,senate,29,29th Senatorial District,1,2,"['Nicholas Reyes', 'Jose M. Serrano']",True
+Bronx,Democratic,State Senator,senate,31,31st Senatorial District,1,2,"['Robert Jackson', 'Nayma Silver-Matos']",True
+Bronx,Republican,Member of the Assembly,assembly,86,86th Assembly District,1,2,"['Maria Diaz', 'Shery A. Olivo']",True
+Brooklyn,Democratic,Alternate Delegate to the Judicial Convention,assembly,58,58th Assembly District,10,10,"['Felina Backer', 'Vaughn Mayers', 'Keith Carr', 'Hassan Bakiriddin', 'Teresa Coaxum', 'Elaine E. Reid', 'Naomi N. Hopkins', 'Jibreel S. Jalloh', 'Gladys N. Egwuonwu', 'Rhea Ann Smith']",True
+Brooklyn,Democratic,Alternate Delegate to the Judicial Convention,assembly,58,58th Assembly District,10,10,"['Pamela Stephens', 'Nicole Julius', 'Eric Vassell', 'John Dickson', 'Henroy H. McKenzie', 'Howard A. Dacosta', 'Gerald Dumay', 'Kielah Burrowes', 'Simone A. Murray', 'Prentice E. Cox']",True
+Brooklyn,Democratic,County Committee,assembly,45,003/45,3,2,"['Syed Hussain', 'Diana Kiksman']",True
+Brooklyn,Democratic,County Committee,assembly,45,003/45,3,3,"['Aharon Zarzar', 'Naomi A. Rabeeya', 'David S. Goldberg']",True
+Brooklyn,Democratic,County Committee,assembly,42,006/42,4,3,"['Cece M. Smith', 'Constance Mae Lightman', 'Stefanie S. Bannister']",True
+Brooklyn,Democratic,County Committee,assembly,42,006/42,4,4,"['Aissatou Barry', 'Anne Gaudet', 'Una Gayle', 'Gloria Williams']",True
+Brooklyn,Democratic,County Committee,assembly,43,007/43,4,3,"['Lisa Reed', 'Evelyn Simpson', 'Jaselle Richardson']",True
+Brooklyn,Democratic,County Committee,assembly,43,007/43,4,4,"['Karl J. Nelson', 'Larry W. Artis', 'Sharon P. Joseph', 'Robert A. Saffer']",True
+Brooklyn,Democratic,County Committee,assembly,59,007/59,4,2,"['Racquel A. Williams', 'Aissata L. Diallo']",True
+Brooklyn,Democratic,County Committee,assembly,59,007/59,4,4,"['Jaime R. Williams', 'Norma Rivas', 'Fresnel Augustin', 'Michelle F. Sealey']",True
+Brooklyn,Democratic,County Committee,assembly,57,011/57,4,4,"['Rhonda Byam', 'Sharon Fox', 'Beatrice Diggs Rodriguez', 'Celeste Jones']",True
+Brooklyn,Democratic,County Committee,assembly,57,011/57,4,4,"['Neil A. Donnelly', 'James F. Tolbert', 'Andrew F. Sloat', 'Iben A. Falconer']",True
+Brooklyn,Democratic,County Committee,assembly,51,015/51,3,2,"['Damien Andrade', 'Nicholas Azadian']",True
+Brooklyn,Democratic,County Committee,assembly,51,015/51,3,3,"['Jasire Figueroa', 'Jorge Mora', 'Luis Daniel Rivera']",True
+Brooklyn,Democratic,County Committee,assembly,42,016/42,4,4,"['Dawn Cozier', 'Michael Elam', 'Marilyn Charles', 'Robin Jackson']",True
+Brooklyn,Democratic,County Committee,assembly,42,016/42,4,2,"['Scott Alexander', 'Sara L. Manaugh']",True
+Brooklyn,Democratic,County Committee,assembly,55,020/55,3,1,['Christopher McClain'],False
+Brooklyn,Democratic,County Committee,assembly,55,020/55,3,3,"['Dwight K. Hinton', 'Nicole T. Farrell', 'Miriam B. Robertson']",True
+Brooklyn,Democratic,County Committee,assembly,42,022/42,4,2,"['Evamarie Graham', 'Jay Hane']",True
+Brooklyn,Democratic,County Committee,assembly,42,022/42,4,3,"['Christopher M. Faga', 'Nadine A. Friedman-Roberts', 'Linda A. Holmes']",True
+Brooklyn,Democratic,County Committee,assembly,51,023/51,4,4,"['Seth M. Pollack', 'Frank La Frazia', 'Elizabeth-Anne M. Zieminski', 'John V. Santore']",True
+Brooklyn,Democratic,County Committee,assembly,51,023/51,4,3,"['Anthony Ayala', 'Corey Velez', 'Dulcinia Ayala']",True
+Brooklyn,Democratic,County Committee,assembly,55,023/55,4,4,"['Hassan Bilal', 'Essie Duggan', 'David Robertson', 'Susalet Julien 1800B Sterling Place Brooklyn, NY']",True
+Brooklyn,Democratic,County Committee,assembly,55,023/55,4,3,"['Tammy King', 'Christine P. Burke', 'Zyshonne K. Smith']",True
+Brooklyn,Democratic,County Committee,assembly,42,024/42,4,4,"['Josslyn Vincent', 'Beverly Henry', 'Paulette Henry', 'Vladimir Sterlin']",True
+Brooklyn,Democratic,County Committee,assembly,42,024/42,4,3,"['Michael J. Stewart', 'Blake Morris', 'Karmen Naidoo']",True
+Brooklyn,Democratic,County Committee,assembly,52,024/52,4,4,"['Leo T. McMahon', 'Thomas L. McMahon', 'David S. Yassky', 'Hans S. Zhou']",True
+Brooklyn,Democratic,County Committee,assembly,52,024/52,4,2,"['Sabrina Rezzy', 'David Mansur']",True
+Brooklyn,Democratic,County Committee,assembly,58,024/58,2,1,['Benjamin H. Sacks'],False
+Brooklyn,Democratic,County Committee,assembly,58,024/58,2,2,"['Gerson Chandler Jr.', 'Malika P. Belgrave']",True
+Brooklyn,Democratic,County Committee,assembly,47,025/47,2,2,"['Peter M. Finnen', 'Karla V. Herrera']",True
+Brooklyn,Democratic,County Committee,assembly,47,025/47,2,2,"['Yong Chang Wu', 'Murong Long']",True
+Brooklyn,Democratic,County Committee,assembly,55,025/55,4,4,"['Paulette Wilson', 'Tracey Cashaw', 'Erica Lewis', 'Maria Gemna De Rareniere Felix']",True
+Brooklyn,Democratic,County Committee,assembly,55,025/55,4,3,"['Brandon A. Lowery', 'LA K. Dickens', 'Isaiah A. Miller']",True
+Brooklyn,Democratic,County Committee,assembly,42,027/42,2,2,"['Peter Dinhofer', 'Menachem Rosenbaum']",True
+Brooklyn,Democratic,County Committee,assembly,42,027/42,2,2,"['Gina S. Anderson', 'Robin L. Finkelstein']",True
+Brooklyn,Democratic,County Committee,assembly,57,028/57,4,1,['Maisha Morales'],False
+Brooklyn,Democratic,County Committee,assembly,57,028/57,4,4,"['Maureen Sardinha', 'Dana Sardinha', 'Leah Sardinha', 'Filmore Gregory']",True
+Brooklyn,Democratic,County Committee,assembly,57,029/57,3,2,"['Renee Collymore', 'Beatrice Collymore']",True
+Brooklyn,Democratic,County Committee,assembly,57,029/57,3,3,"['Stephanie T. Schwarz', 'Thomas J. Trasser', 'Raymond N. Jowdy']",True
+Brooklyn,Democratic,County Committee,assembly,42,030/42,3,2,"['Avi H. Glickstein', 'Christian D. Rutherford']",True
+Brooklyn,Democratic,County Committee,assembly,42,030/42,3,3,"['Monica Okologo', 'Jonas Dastine', 'Agatha Jack']",True
+Brooklyn,Democratic,County Committee,assembly,43,031/43,4,3,"['Lamont Carolina', 'James O. Dunn III', 'Jason S. Hill']",True
+Brooklyn,Democratic,County Committee,assembly,43,031/43,4,4,"['Patricia A. Charles', 'Carmen Lourdes Martinez', 'Pamela Yard', 'Laila B. Wilson']",True
+Brooklyn,Democratic,County Committee,assembly,47,031/47,2,2,"['Helen Nganheung Lau', 'Amy Lau']",True
+Brooklyn,Democratic,County Committee,assembly,47,031/47,2,2,"['Caryl Rosen', 'Mitchell Rosen']",True
+Brooklyn,Democratic,County Committee,assembly,54,037/54,3,3,"['Jessica K. Daly', 'Kimberly R. Edwards 80A Aberdeen Street Brooklyn, NY', 'Allison J. Feldman']",True
+Brooklyn,Democratic,County Committee,assembly,54,037/54,3,3,"['Domingo Lopez', 'Fernando Nuesi', 'Jorge P. Gonzalez']",True
+Brooklyn,Democratic,County Committee,assembly,43,038/43,4,3,"['Etima Daley', 'Damion Trent', 'Latrell K. Baker']",True
+Brooklyn,Democratic,County Committee,assembly,43,038/43,4,4,"['Suwen Cheong', 'Christopher M. Grimshaw', 'Gideon D. Lazarus', 'Rafael A. Roa']",True
+Brooklyn,Democratic,County Committee,assembly,54,040/54,4,2,"['Paperboy Love Prince', 'Alexis Elder']",True
+Brooklyn,Democratic,County Committee,assembly,54,040/54,4,4,"['Sergei Champagne', 'Charles J. Monaco', 'Christian Daniel Rivera', 'Christy S. Loutre']",True
+Brooklyn,Democratic,County Committee,assembly,42,041/42,4,1,['Christopher G. Maisano'],False
+Brooklyn,Democratic,County Committee,assembly,42,041/42,4,4,"['Chaim Y. Hirsch', 'Doris Singh', 'Zev Egert', 'Denton Black']",True
+Brooklyn,Democratic,County Committee,assembly,54,042/54,3,3,"['Dinorka R. Ogando', 'Fausto Bran', 'Heather Black']",True
+Brooklyn,Democratic,County Committee,assembly,54,042/54,3,3,"['Jessica R. Highet', 'Michael Varley', 'Ari Amir']",True
+Brooklyn,Democratic,County Committee,assembly,56,043/56,4,4,"['Pamela K. Judkins', 'Lalena M. Fernandez-Butler', 'Kevin Butler', 'Tywana J. Wilson']",True
+Brooklyn,Democratic,County Committee,assembly,56,043/56,4,4,"['Michael B. Bailey Jr.', 'Regina Edwards', 'Laurel L. Girvan', 'Danielle R. Naven']",True
+Brooklyn,Democratic,County Committee,assembly,54,048/54,4,4,"['Eliseo Ruiz', 'Luz Ruiz', 'Raul King', 'Belkis King']",True
+Brooklyn,Democratic,County Committee,assembly,54,048/54,4,1,['Britta Afae'],False
+Brooklyn,Democratic,County Committee,assembly,42,049/42,4,3,"['Alix C. Vernet', 'Yanick N. Vernet', 'Carlon E. Williams']",True
+Brooklyn,Democratic,County Committee,assembly,42,049/42,4,4,"['David A. Karopkin', 'Eleanor H. Nussbaum', 'Raymond P. Oneill', 'Susan K. Oneill']",True
+Brooklyn,Democratic,County Committee,assembly,54,049/54,3,2,"['Anita Haines', 'Abdul Sattar']",True
+Brooklyn,Democratic,County Committee,assembly,54,049/54,3,3,"['Kimberly Rosario', 'Nelson J. Padilla', 'Humberto Gomez']",True
+Brooklyn,Democratic,County Committee,assembly,54,049/54,3,1,['Lauren Martin'],False
+Brooklyn,Democratic,County Committee,assembly,42,050/42,4,2,"['Raina L. Clark-Gaun', 'B. S. Garron-Caine']",True
+Brooklyn,Democratic,County Committee,assembly,42,050/42,4,4,"['Wayne Lamont', 'Glen McMillan', 'Blasmith Philemonth', 'Blondell Lighty']",True
+Brooklyn,Democratic,County Committee,assembly,45,051/45,2,2,"['Esther Haddad', 'David Haddad']",True
+Brooklyn,Democratic,County Committee,assembly,45,051/45,2,2,"['Craig R. Hammerman', 'Michelle R. Barnes-Anderson']",True
+Brooklyn,Democratic,County Committee,assembly,44,052/44,2,2,"['John Cavanagh', 'Karen Cavanagh']",True
+Brooklyn,Democratic,County Committee,assembly,44,052/44,2,2,"['Waqil Ahmen', 'Mujtaba A. Razvi']",True
+Brooklyn,Democratic,County Committee,assembly,58,053/58,4,4,"['Joan Bender', 'Elizabeth G. Ellis', 'Pamela Stephens', 'Jasmine Crystal Vidal']",True
+Brooklyn,Democratic,County Committee,assembly,58,053/58,4,4,"['Deborah Rozier', 'Sharon Vidal', 'Cecelia Foster', 'Denise Bowman']",True
+Brooklyn,Democratic,County Committee,assembly,44,055/44,2,2,"['Nicole Cata', 'Benjamin Theodore']",True
+Brooklyn,Democratic,County Committee,assembly,44,055/44,2,2,"['Noorin Pervaiz', 'Mansoor U. Hassan']",True
+Brooklyn,Democratic,County Committee,assembly,54,056/54,3,3,"['Richard A. Wingert', 'Mary C. Colbert', 'Sara L. Haines']",True
+Brooklyn,Democratic,County Committee,assembly,54,056/54,3,3,"['Angelic K. Oliveras', 'Antonina Anderson', 'Bernice Walker']",True
+Brooklyn,Democratic,County Committee,assembly,58,057/58,4,4,"['Valerie Woodford', 'Doleisha S. Robinson', 'Nicholas D. Chandler', 'Orisha R. Porter']",True
+Brooklyn,Democratic,County Committee,assembly,58,057/58,4,4,"['Alban Boucher', 'Jacqueline McRae', 'Joy McRae', 'Waymond A. Carey']",True
+Brooklyn,Democratic,County Committee,assembly,43,059/43,4,2,"['Eula M. Dixon', 'Leda F. Davis']",True
+Brooklyn,Democratic,County Committee,assembly,43,059/43,4,4,"['John H. Sagan', 'Timothy G. Hunter', 'Rita C. Joseph', 'Jeanne M. Baron']",True
+Brooklyn,Democratic,County Committee,assembly,58,062/58,4,1,['Randolph R. Waterman'],False
+Brooklyn,Democratic,County Committee,assembly,58,062/58,4,4,"['Omar Boucher', 'Elaine Reid', 'Lorna Cummings', 'Terry Gales']",True
+Brooklyn,Democratic,County Committee,assembly,44,077/44,2,2,"['George Albro', 'Matthew McMorrow']",True
+Brooklyn,Democratic,County Committee,assembly,44,077/44,2,2,"['Sharif Ahmad', 'Dillram Jan']",True
+Brooklyn,Democratic,Delegate to Judicial Convention,assembly,54,54th Assembly District,6,1,['Paperboy Love Prince'],False
+Brooklyn,Democratic,Delegate to Judicial Convention,assembly,54,54th Assembly District,6,6,"['Pablo Rivera', 'Denise Peace', 'Paula A. Melendez', 'Juan C. Rodriguez', 'Brunilda Cortes', 'Evelyn Muller']",True
+Brooklyn,Democratic,Delegate to Judicial Convention,assembly,57,57th Assembly District,13,13,"['Jeanessa R. Walker', 'Tanja Richardson', 'Quincy Auger', 'Tara Kumar', 'John Adelman', 'Derek Murphy', 'Leigha Gillespie', 'Shaquana D. Boykin', 'Brian Chelcun', 'Roslyn Lurye Tate', 'Ketriana Yvonne', 'Khyrie Alleyne', 'Janice Henderson']",True
+Brooklyn,Democratic,Delegate to Judicial Convention,assembly,57,57th Assembly District,13,7,"['Charmel B. Rogers', 'Nilda Acevedo', 'Darlene Bashir', 'Terri Connelly', 'Burton A. Lewis', 'Thea J. Ogunusi', 'Michael Boomer']",True
+Brooklyn,Democratic,Delegate to Judicial Convention,assembly,58,58th Assembly District,10,10,"['Kevin Parker', 'Farah N. Louis', 'Marietta Small', 'Deborah Bourne', 'Sabrina Dieujuste', 'Velda Jeffrey', 'Omar C. Boucher', 'Andrenia C. Burgis', 'Joan M. L. Alexander-Bakiriddin', 'Francis X. Shea']",True
+Brooklyn,Democratic,Delegate to Judicial Convention,assembly,58,58th Assembly District,10,10,"['Ernest Skinner', 'Nicole Robinson-Etienne', 'Charles O. Galbreath', 'Yvonne M. Chandler', 'R. Eric Waterman', 'Dalton Robinson', 'June Persaud', 'Donna Phillips', 'Judy Porter', 'Dionne L. Davis']",True
+Brooklyn,Democratic,Judge of the Civil Court,court,,District - 6th Municipal Court District - Kings,1,2,"['Janice P. Purvis', 'Michelle Desouza']",True
+Brooklyn,Democratic,Judge of the Civil Court,court,,District - 8th Municipal Court District - Kings,1,2,"['Abbye L. Lawrence', 'Susan A. Liebman']",True
+Brooklyn,Democratic,Member of the Assembly,assembly,43,43rd Assembly District,1,2,"['Ahron Gluck', 'Brian-Christopher A. Cunningham']",True
+Brooklyn,Democratic,Member of the Assembly,assembly,46,46th Assembly District,1,2,"['Joseph Santangelo', 'Chris McCreight']",True
+Brooklyn,Democratic,Member of the Assembly,assembly,50,50th Assembly District,1,2,"['Emily Gallagher', 'Andrew Bodiford']",True
+Brooklyn,Democratic,Member of the Assembly,assembly,52,52nd Assembly District,1,2,"['Jo Anne Simon', 'Lydia Bella Green']",True
+Brooklyn,Democratic,Member of the Assembly,assembly,54,54th Assembly District,1,2,"['Christian Celeste Tate', 'Erik Martin Dilan']",True
+Brooklyn,Democratic,Member of the Assembly,assembly,56,56th Assembly District,1,3,"['Michael Bailey', 'Stefani L. Zinerman', 'Eon Huntley']",True
+Brooklyn,Democratic,Member of the Assembly,assembly,57,57th Assembly District,1,2,"['Samantha N. Johnson', 'Phara Souffrant Forrest']",True
+Brooklyn,Democratic,Member of the Assembly,assembly,59,59th Assembly District,1,2,"['Jaime R. Williams', 'Jibreel Jalloh']",True
+Brooklyn,Democratic,Representative in Congress,congress,10,10th Congressional District,1,2,"['Dan Goldman', 'Brad Lander']",True
+Brooklyn,Democratic,Representative in Congress,congress,11,11th Congressional District,1,2,"['Allison Ziogas', 'Mike DeCillis']",True
+Brooklyn,Democratic,Representative in Congress,congress,7,7th Congressional District,1,4,"['Vichal Kumar', 'Antonio Reynoso', 'Claire Valdez', 'Julie Won']",True
+Brooklyn,Democratic,Representative in Congress,congress,9,9th Congressional District,1,3,"['Mike Goldfarb', 'Yvette D. Clarke', 'Joshua A. Bristol']",True
+Brooklyn,Democratic,State Committee,assembly,43,43rd Assembly District,2,2,"['Michelle Tege', 'Anthony Beckford']",True
+Brooklyn,Democratic,State Committee,assembly,43,43rd Assembly District,2,2,"['Nakisha O. Evans', 'Akel K. Williams']",True
+Brooklyn,Democratic,State Committee,assembly,54,54th Assembly District,2,1,['Alan Gamboa'],False
+Brooklyn,Democratic,State Committee,assembly,54,54th Assembly District,2,1,['Sandy Nurse'],False
+Brooklyn,Democratic,State Committee,assembly,54,54th Assembly District,2,2,"['Arleny Alvarado-McCalla', 'Heriberto Mateo']",True
+Brooklyn,Democratic,State Committee,assembly,56,56th Assembly District,2,2,"['Kenesha Traynham-Cooper', 'Henry L. Butler']",True
+Brooklyn,Democratic,State Committee,assembly,56,56th Assembly District,2,2,"['Carmella C. Charrington', 'Omar Hardy']",True
+Brooklyn,Democratic,State Committee,assembly,57,57th Assembly District,2,2,"['Shaquana D. Boykin', 'Akwasi Agyeman']",True
+Brooklyn,Democratic,State Committee,assembly,57,57th Assembly District,2,1,['Maisha Morales'],False
+Brooklyn,Democratic,State Committee,assembly,57,57th Assembly District,2,1,['Michael Boomer'],False
+Brooklyn,Democratic,State Committee,assembly,58,58th Assembly District,2,1,['Mercedes Narcisse'],False
+Brooklyn,Democratic,State Committee,assembly,58,58th Assembly District,2,2,"['Monique Chandler-Waterman', 'Kevin S. Parker']",True
+Brooklyn,Democratic,State Committee,assembly,59,59th Assembly District,2,2,"['Jaime R. Williams', 'Frank R. Seddio']",True
+Brooklyn,Democratic,State Committee,assembly,59,59th Assembly District,2,1,['Stanley Scutt'],False
+Brooklyn,Democratic,State Comptroller,citywide,,Citywide,1,3,"['Thomas P. DiNapoli', 'Drew Warshaw', 'Raj Goyle']",True
+Brooklyn,Democratic,State Senator,senate,12,12th Senatorial District,1,2,"['Steven B. Raga', 'Aber Kawas']",True
+Brooklyn,Democratic,State Senator,senate,15,15th Senatorial District,1,2,"['Albert Baldeo', 'Joseph P. Addabbo Jr.']",True
+Brooklyn,Democratic,State Senator,senate,23,23rd Senatorial District,1,2,"['Omar Mohamad', 'Jessica Scarcella-Spanton']",True
+Brooklyn,Democratic,State Senator,senate,25,25th Senatorial District,1,2,"['Marlon Rice', 'Jabari Brisport']",True
+Brooklyn,Republican,State Senator,senate,22,22nd Senatorial District,1,2,"['Bernard Vaiselberg', 'Carl Caller']",True
+Manhattan,Democratic,Alternate Delegate to the Judicial Convention,assembly,66,66th Assembly District,15,14,"['Richard F. Braun', 'Jason Gerson', 'Judith A. Jacobson', 'Thomas Smoot Jr.', 'Robert G. Rosenthal', 'Lois A. Rakoff', 'Karla Moskowitz', 'Frances Curtis', 'Patricia A. Laraia', 'Jasper Price', 'Ritu R. Chattree', 'Michael Levario', 'Alfred R. Fuente', 'Megan E. Pascarella']",True
+Manhattan,Democratic,Alternate Delegate to the Judicial Convention,assembly,66,66th Assembly District,15,6,"['Alan Ross', 'Carmin Gonzalez', 'Deborah Finston', 'Shelly Warwick', 'Raymond W. Cline', 'Mark Fraiden']",True
+Manhattan,Democratic,Alternate Delegate to the Judicial Convention,assembly,68,68th Assembly District,10,8,"['William Bellber-Bentancourt', 'Wendy Taylor', 'Rosa M. Rivera', 'Marcus A. Sanchez Jr.', 'Lecora Prince-Okeagu', 'Wendy Chan', 'Sandra Perez', 'Edward Davis']",True
+Manhattan,Democratic,Alternate Delegate to the Judicial Convention,assembly,68,68th Assembly District,10,9,"['Melanie Ruiz', 'Melinda Velez', 'Ismael Rodriguez', 'Kaliris Salas-Ramirez', 'Juhaib Choudhury', 'Raymond Santana', 'Corazon D. Grajales', 'Mildred Jerrell', 'Christal Williams']",True
+Manhattan,Democratic,Alternate Delegate to the Judicial Convention,assembly,68,68th Assembly District,10,8,"['Belia Owens', 'Joseph Poole', 'Esther DeVore', 'Barbara Butler', 'Lili Ramirez', 'Evelis Galarza-Serrano', 'Alex Alvarez Diaz', 'Krystal Roper']",True
+Manhattan,Democratic,Alternate Delegate to the Judicial Convention,assembly,72,72nd Assembly District,8,8,"['Maurice A. Edwards', 'Barbara M. Frazier', 'Iris Baltazar', 'Hector Vasquez', 'Erwin Fernandez', 'Mariam James', 'Micaela Lugo', 'Elizabeth Balaguer']",True
+Manhattan,Democratic,Alternate Delegate to the Judicial Convention,assembly,72,72nd Assembly District,8,8,"['Paloma Lara', 'Patricia Anderton', 'Carolyn Murtaugh', 'Christopher Hazeltine', 'Edgar Tavarez', 'Quann D. Boyd', 'Carole G. Mulligan', 'Danette Lipten']",True
+Manhattan,Democratic,Delegate to Judicial Convention,assembly,66,66th Assembly District,15,15,"['Erik D. Bottcher', 'Kathryn Freed', 'Anthony S. Hoffmann', 'Jill Goodkind', 'Melissa M. Carty', 'Allen N. Roskoff', 'Dennis Gault', 'Jonathan L. Geballe', 'Sheila R. Rule', 'Samuel Chiera', 'Linda E. Jacobson', 'Morton Minsley', 'Daniel L. Palmisano', 'Richard Corman', 'Kathy Slawinski']",True
+Manhattan,Democratic,Delegate to Judicial Convention,assembly,66,66th Assembly District,15,7,"['Maria Passanente-Derr', 'Vanessa Warren', 'Susan Lee', 'Alix Fredrika Kucker', 'Norma Ramirez', 'Erin Hussein', 'Mark Fiedler']",True
+Manhattan,Democratic,Delegate to Judicial Convention,assembly,68,68th Assembly District,10,8,"['Sharon Cotton', 'Christine Johnson', 'Stanley Johnson', 'Luis Torres', 'Natasha R. Williams', 'Wanda Yvette Hopkins', 'Bridgette Ann Scott', 'Christal D. Williams']",True
+Manhattan,Democratic,Delegate to Judicial Convention,assembly,68,68th Assembly District,10,10,"['John Ruiz Miranda', 'Melissa Mark Viverito', 'Diana I. Ayala', 'Elsie Encarnacion', 'Xavier Santiago', 'Harry Rodriguez', 'Nina Saxon', 'Claudia Perez', 'Raul Reyes', 'Keith Lilly']",True
+Manhattan,Democratic,Delegate to Judicial Convention,assembly,68,68th Assembly District,10,9,"['Monisha Mapp', 'Beverly MacFarlane', 'Patricia Del Pilar', 'Rosa G. Diaz', 'Saundrea I. Coleman', 'Primo Martin', 'David Cuspert', 'Peggy A. Morales', 'Debra Robles']",True
+Manhattan,Democratic,Delegate to Judicial Convention,assembly,71,71st Assembly District,11,1,['Theo Bruce Chino-Tavarez'],False
+Manhattan,Democratic,Delegate to Judicial Convention,assembly,71,71st Assembly District,11,11,"['Michael S. Hano', 'Julien Segura', 'Minerva Roman-Luna', 'James E. Behr', 'Orlando Nunez', 'Joseph M. Morales', 'Maybelline Evelyn Boyer', 'Garret D. Sokoloff', 'Philippe Segura', 'Heather Zicko', 'Matthew Robert Miller']",True
+Manhattan,Democratic,Delegate to Judicial Convention,assembly,71,71st Assembly District,11,11,"['Earnestine Bell Temple', 'Maria A. Luna', 'Johanna Garcia', 'Rita Miller', 'Juana H. Luna', 'Jackie Rowe Adams', 'Nancy Brown', 'Anthony R. Viola', 'Carmen I. Grullon De Rojas', 'Susan Southwell', 'Dolores Leito']",True
+Manhattan,Democratic,Delegate to Judicial Convention,assembly,72,72nd Assembly District,8,8,"['Carmen N. De La Rosa', 'Manny De Los Santos', 'Dayana Pichardo', 'Maria Morillo', 'Ramon De La Rosa', 'Brunilda L. Rodriguez', 'Fernando Mendez', 'Rosario Capellan']",True
+Manhattan,Democratic,Delegate to Judicial Convention,assembly,72,72nd Assembly District,8,4,"['Clarissa Paulino', 'Argentina Cruz', 'Vicente Paulino', 'Francesca Castellanos']",True
+Manhattan,Democratic,Delegate to Judicial Convention,assembly,72,72nd Assembly District,8,9,"['Elizabeth Pepin', 'Maria Mazara', 'Jasinta Delacruz', 'Edwin Rosario', 'Jennyfer Almanzar', 'Lyana M. Fernandez', 'Joanna Katz', 'Danette Lipten', 'Miosotis N. Alba']",True
+Manhattan,Democratic,Member of the Assembly,assembly,37,37th Assembly District,1,3,"['Samantha Kattan', 'Pia Rahman', 'Melissa Orlando']",True
+Manhattan,Democratic,Member of the Assembly,assembly,65,65th Assembly District,1,6,"['Jasmin Sanchez', 'Illapa Sairitupac', 'Mariama N. James', 'Wei-Li Tjong', 'Lilah Mejia', 'Jay Jacky Wong']",True
+Manhattan,Democratic,Member of the Assembly,assembly,66,66th Assembly District,1,6,"['David Siffert', 'Benjamin Yee', 'Furhan Ahmad', 'Ryder Kessler', 'Jeannine Kiely', 'Corinne Arnold']",True
+Manhattan,Democratic,Member of the Assembly,assembly,68,68th Assembly District,1,4,"['Diana I. Ayala', 'Edward Gibbs', 'Tamika Mapp', 'William Smith']",True
+Manhattan,Democratic,Member of the Assembly,assembly,69,69th Assembly District,1,2,"['Eli Northrup', 'Stephanie R. Ruskay']",True
+Manhattan,Democratic,Member of the Assembly,assembly,70,70th Assembly District,1,2,"['Conrad Blackburn', 'Jordan J.G. Wright']",True
+Manhattan,Democratic,Member of the Assembly,assembly,71,71st Assembly District,1,3,"['Al Taylor', 'Rolando Gomez', 'Julien Segura']",True
+Manhattan,Democratic,Member of the Assembly,assembly,72,72nd Assembly District,1,2,"['Francesca Castellanos', 'Manny De Los Santos']",True
+Manhattan,Democratic,Member of the Assembly,assembly,75,75th Assembly District,1,2,"['Emily YueXin Miller', 'Tony Simone']",True
+Manhattan,Democratic,Member of the City Council,other,3,3rd Council District,1,4,"['Lindsey Boylan', 'Leslie Boghosian Murphy', 'Layla Law-Gisiko', 'Carl Wilson']",True
+Manhattan,Democratic,Representative in Congress,congress,10,10th Congressional District,1,2,"['Dan Goldman', 'Brad Lander']",True
+Manhattan,Democratic,Representative in Congress,congress,12,12th Congressional District,1,8,"['Nina Schwalbe', 'Patrick Timmins', 'Chris Diep', 'George Conway', 'Laura Dunn', 'Micah C. Lasher', 'Alex Bores', 'Jack Kennedy Schlossberg']",True
+Manhattan,Democratic,Representative in Congress,congress,13,13th Congressional District,1,4,"['Oscar J. Romero Jr.', 'Theo Bruce Chino-Tavarez', 'Darializa Avila Chevalier', 'Adriano Espaillat']",True
+Manhattan,Democratic,State Committee,assembly,65,65th Assembly District,2,1,['Fannie Ip'],False
+Manhattan,Democratic,State Committee,assembly,65,65th Assembly District,2,2,"['Grauven Olivares', 'Morton Minsley']",True
+Manhattan,Democratic,State Committee,assembly,68,68th Assembly District,2,1,['Saundrea I. Coleman'],False
+Manhattan,Democratic,State Committee,assembly,68,68th Assembly District,2,1,['Rosa G. Diaz'],False
+Manhattan,Democratic,State Committee,assembly,68,68th Assembly District,2,1,['Joannie Acevedo'],False
+Manhattan,Democratic,State Committee,assembly,68,68th Assembly District,2,2,"['James D. Gray', 'Mildred Maneiro']",True
+Manhattan,Democratic,State Committee,assembly,68,68th Assembly District,2,2,"['Stephanie Arroyo', 'Lance Blake']",True
+Manhattan,Democratic,State Committee,assembly,71,71st Assembly District,2,1,['Minerva Roman-Luna'],False
+Manhattan,Democratic,State Committee,assembly,71,71st Assembly District,2,2,"['Maria A. Luna', 'Nobles Crawford']",True
+Manhattan,Democratic,State Committee,assembly,72,72nd Assembly District,2,2,"['Rosendo Mejia Dominguez', 'Dayana Pichardo']",True
+Manhattan,Democratic,State Committee,assembly,72,72nd Assembly District,2,2,"['Francesca Castellanos', 'Vicente Paulino']",True
+Manhattan,Democratic,State Committee,assembly,72,72nd Assembly District,2,1,['Edgar Tavarez'],False
+Manhattan,Democratic,State Comptroller,citywide,,Citywide,1,3,"['Thomas P. DiNapoli', 'Drew Warshaw', 'Raj Goyle']",True
+Manhattan,Democratic,State Senator,senate,27,27th Senatorial District,1,2,"['Grace Lee', 'Yuh-Line Niou']",True
+Manhattan,Democratic,State Senator,senate,29,29th Senatorial District,1,2,"['Nicholas Reyes', 'Jose M. Serrano']",True
+Manhattan,Democratic,State Senator,senate,31,31st Senatorial District,1,2,"['Robert Jackson', 'Nayma Silver-Matos']",True
+Queens,Democratic,Delegate to Judicial Convention,assembly,24,24th Assembly District,7,2,"['Albert Baldeo', 'Usha I. Raghunath']",True
+Queens,Democratic,Delegate to Judicial Convention,assembly,24,24th Assembly District,7,7,"['Martha Taylor', 'Rhonda S. Binda', 'David I. Weprin', 'John P. Albert', 'Ahnaf Alam', 'Jonathan B. Taylor', 'Mark S. Weprin']",True
+Queens,Democratic,Delegate to Judicial Convention,assembly,28,28th Assembly District,8,6,"['Melissa Ann San Pedro', 'Mark J. Laster', 'Christopher R. Hanusa', 'Maria Kaufer', 'Richard J. Nunez-Lawrence', 'Gladys Sandoval']",True
+Queens,Democratic,Delegate to Judicial Convention,assembly,28,28th Assembly District,8,1,['Jonathan D. Rinaldi'],False
+Queens,Democratic,Delegate to Judicial Convention,assembly,28,28th Assembly District,8,8,"['Karen Koslowitz', 'Sharon Levy', 'David Aronov', 'Maximillian Morquecho', 'Ronnie Croce', 'Edwin K. Wong', 'Myrna C. Jacobson', 'Lara M. Evangelista']",True
+Queens,Democratic,Delegate to Judicial Convention,assembly,33,33rd Assembly District,11,11,"['Gregory W. Meeks', 'Roslin Spigner', 'Wanda R. Manley', 'I. Daneek Miller', 'Alma J. Cave', 'Marie A. Slaughter', 'Leroy Manuel', 'Robert Mark Alleyne', 'June B. Bunch', 'Darryl Smith', 'Samuel Murray']",True
+Queens,Democratic,Delegate to Judicial Convention,assembly,33,33rd Assembly District,11,6,"['Robert Williams', 'Phil Hollant', 'Warren Ross', 'Danny Jarvis', 'Sandra Long', 'Arnold McKinley']",True
+Queens,Democratic,District Leader,party_leadership,24,Democratic Leadership District 24 Part B,2,2,"['Albert Baldeo', 'Usha I. Raghunath']",True
+Queens,Democratic,District Leader,party_leadership,24,Democratic Leadership District 24 Part B,2,2,"['Varinder Singh', 'Rhonda S. Binda']",True
+Queens,Democratic,District Leader,party_leadership,28,Democratic Leadership District 28 Part B,2,1,['Nina Kulkarni'],False
+Queens,Democratic,District Leader,party_leadership,28,Democratic Leadership District 28 Part B,2,2,"['Melissa Ann San Pedro', 'Christopher R. Hanusa']",True
+Queens,Democratic,District Leader,party_leadership,28,Democratic Leadership District 28 Part B,2,2,"['Maximillian Morquecho', 'Sharon Levy']",True
+Queens,Democratic,District Leader,party_leadership,34,Democratic Leadership District 34 Part A,2,2,"['Carolina Maria Korth', 'Andreas Migias']",True
+Queens,Democratic,District Leader,party_leadership,34,Democratic Leadership District 34 Part A,2,1,['Shawna Morlock'],False
+Queens,Democratic,District Leader,party_leadership,35,Democratic Leadership District 35 Part A,2,2,"['Sonya Harvey', 'Hiram Monserrate']",True
+Queens,Democratic,District Leader,party_leadership,35,Democratic Leadership District 35 Part A,2,2,"['David Aiken', 'Larinda C. Hooks']",True
+Queens,Democratic,District Leader,party_leadership,35,Democratic Leadership District 35 Part B,2,1,['James B. Fogle'],False
+Queens,Democratic,District Leader,party_leadership,35,Democratic Leadership District 35 Part B,2,2,"['Jose M. Morillo', 'Michelle Dunston']",True
+Queens,Democratic,Judge of the Civil Court,other,,County - Queens,2,4,"['John J. Ciafone', 'Julie M. Milner', 'Edward Irizarry', 'Edmond Wong']",True
+Queens,Democratic,Member of the Assembly,assembly,23,23rd Assembly District,1,2,"['Pesach Osina', 'Mike Scala']",True
+Queens,Democratic,Member of the Assembly,assembly,28,28th Assembly District,1,2,"['Andrew D. Hevesi', 'Jonathan D. Rinaldi']",True
+Queens,Democratic,Member of the Assembly,assembly,30,30th Assembly District,1,3,"['Somnath Ghimire', 'Patrick Martinez', 'Shamsul Haque']",True
+Queens,Democratic,Member of the Assembly,assembly,32,32nd Assembly District,1,5,"['Mohammed J. Molla', 'Latoya L. LeGrand', 'Tunisia Morrison', 'Queen Johnson', 'Nathaniel Hezekiah III']",True
+Queens,Democratic,Member of the Assembly,assembly,33,33rd Assembly District,1,2,"['Oster Bryan', 'Clyde Vanel']",True
+Queens,Democratic,Member of the Assembly,assembly,34,34th Assembly District,1,2,"['Brian Romero', 'Rosa Sanchez']",True
+Queens,Democratic,Member of the Assembly,assembly,36,36th Assembly District,1,3,"['Mary Jobaida', 'Kevin P. Coenen', 'Diana C. Moreno']",True
+Queens,Democratic,Member of the Assembly,assembly,37,37th Assembly District,1,3,"['Samantha Kattan', 'Pia Rahman', 'Melissa Orlando']",True
+Queens,Democratic,Member of the Assembly,assembly,38,38th Assembly District,1,2,"['David Orkin', 'Jenifer Rajkumar']",True
+Queens,Democratic,Member of the Assembly,assembly,39,39th Assembly District,1,2,"['Catalina Cruz', 'Yonel E. Letellier Sosa']",True
+Queens,Democratic,Representative in Congress,congress,14,14th Congressional District,1,3,"['Alexandria Ocasio-Cortez', 'Felipe Garcia', 'Marty Dolan']",True
+Queens,Democratic,Representative in Congress,congress,3,3rd Congressional District,1,2,"['Thomas R. Suozzi', 'Danielle Welch']",True
+Queens,Democratic,Representative in Congress,congress,6,6th Congressional District,1,2,"['Grace Meng', 'Chuck Park']",True
+Queens,Democratic,Representative in Congress,congress,7,7th Congressional District,1,4,"['Vichal Kumar', 'Antonio Reynoso', 'Claire Valdez', 'Julie Won']",True
+Queens,Democratic,State Committee,assembly,24,24th Assembly District,2,2,"['Imran I. Rahman', 'Jamilla A. Uddin']",True
+Queens,Democratic,State Committee,assembly,24,24th Assembly District,2,2,"['Albert Baldeo', 'Usha I. Raghunath']",True
+Queens,Democratic,State Committee,assembly,34,34th Assembly District,2,1,['Luis P. Montalvo'],False
+Queens,Democratic,State Committee,assembly,34,34th Assembly District,2,2,"['Carolina Maria Korth', 'John G. Scott']",True
+Queens,Democratic,State Committee,assembly,35,35th Assembly District,2,1,['Lidia V. Alvarado'],False
+Queens,Democratic,State Committee,assembly,35,35th Assembly District,2,2,"['William A. Espinal', 'Trenise Jessica Fuller']",True
+Queens,Democratic,State Committee,assembly,39,39th Assembly District,2,2,"['Alberto Ossa', 'Gabriela Perez']",True
+Queens,Democratic,State Committee,assembly,39,39th Assembly District,2,2,"['Kevin I. Jusino', 'Yanna M. Henriquez']",True
+Queens,Democratic,State Comptroller,citywide,,Citywide,1,3,"['Thomas P. DiNapoli', 'Drew Warshaw', 'Raj Goyle']",True
+Queens,Democratic,State Senator,senate,12,12th Senatorial District,1,2,"['Steven B. Raga', 'Aber Kawas']",True
+Queens,Democratic,State Senator,senate,13,13th Senatorial District,1,3,"['Jessica Ramos', 'Hiram Monserrate', 'Jessica Gonzalez-Rojas']",True
+Queens,Democratic,State Senator,senate,15,15th Senatorial District,1,2,"['Albert Baldeo', 'Joseph P. Addabbo Jr.']",True
+Queens,Republican,Member of the Assembly,assembly,26,26th Assembly District,1,2,"['Robert J. Speranza', 'Philip Sean Grillo']",True
+Queens,Republican,Representative in Congress,congress,3,3rd Congressional District,1,2,"['Michael J. LiPetri Jr.', 'Greg Hach']",True
+Staten Island,Democratic,Representative in Congress,congress,11,11th Congressional District,1,2,"['Allison Ziogas', 'Mike DeCillis']",True
+Staten Island,Democratic,State Comptroller,citywide,,Citywide,1,3,"['Thomas P. DiNapoli', 'Drew Warshaw', 'Raj Goyle']",True
+Staten Island,Democratic,State Senator,senate,23,23rd Senatorial District,1,2,"['Omar Mohamad', 'Jessica Scarcella-Spanton']",True
