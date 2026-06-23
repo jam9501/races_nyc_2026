@@ -133,7 +133,7 @@ let data = [];
 
 // ---------------------- LOAD CSV ----------------------
 
-aasync function load() {
+async function load() {
   const csv = await fetch("races_clean.csv")
     .then(r => r.text());
 
@@ -155,7 +155,6 @@ aasync function load() {
   buildDropdowns();
 }
 
-load();
 
 // ---------------------- BUILD DROPDOWNS ----------------------
 
