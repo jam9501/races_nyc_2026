@@ -155,8 +155,10 @@ async function load() {
     });
 
     console.log("Loaded rows:", data.length);
+    console.log("Sample rows:", data.slice(0, 3));
 
     buildDropdowns();
+
   } catch (err) {
     console.error("CSV load failed:", err);
     document.getElementById("output").innerHTML =
@@ -220,10 +222,8 @@ function parseCandidates(raw) {
 
   if (typeof raw === "string") {
     try {
-      // try JSON first
       return JSON.parse(raw.replace(/'/g, '"'));
     } catch {
-      // fallback: split but avoid breaking names too badly
       return raw.split("||").length > 1
         ? raw.split("||")
         : raw.split(",").map(s => s.trim());
@@ -242,24 +242,32 @@ function renderBallot(){
 
   let filtered = data;
 
-  // optional borough filter
+  // ---------------------- BOROUGH FILTER (FIXED) ----------------------
   if (borough) {
-    filtered = filtered.filter(d =>
-      (d.Borough || "").trim() === borough
-    );
+    filtered = filtered.filter(d => {
+      const b = (d.Borough || "").trim();
+
+      // allow common NYC variations
+      return b === borough || b === "New York" || b === "NYC";
+    });
   }
 
-  // optional district filter (BUT DO NOT EXCLUDE STATEWIDE RACES)
+  // ---------------------- DISTRICT FILTER (CRITICAL FIX) ----------------------
   if (district) {
     filtered = filtered.filter(d => {
-      const rowDistrict = (d.district_id ?? "").toString().trim();
 
-      const isStatewide =
-        rowDistrict === "" ||
-        rowDistrict.toUpperCase() === "STATEWIDE" ||
-        rowDistrict.toUpperCase() === "AT-LARGE";
+      const type = (d.district_type || "").toLowerCase();
+      const id = (d.district_id || "").toString().trim();
 
-      return rowDistrict === district || isStatewide;
+      const isCitywide =
+        type === "citywide" ||
+        id === "" ||
+        (d.district_label || "").toLowerCase().includes("citywide");
+
+      // keep:
+      // 1. exact district match
+      // 2. ALL citywide races
+      return id === district || isCitywide;
     });
   }
 
@@ -279,10 +287,14 @@ function renderBallot(){
 
     const districtLabel = r.district_label || "";
 
-    const rowDistrict = (r.district_id ?? "").toString().trim();
-    const scope = rowDistrict
-      ? `District ${rowDistrict}`
-      : "Statewide / At-Large";
+    const type = (r.district_type || "").toLowerCase();
+
+    const id = (r.district_id || "").toString().trim();
+
+    const scope =
+      type === "citywide" || id === ""
+        ? "Citywide / At-Large"
+        : `District ${id}`;
 
     html += `
       <div class="card">
