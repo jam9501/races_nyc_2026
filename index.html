@@ -96,7 +96,6 @@ select, button{
   border:2px solid #111;
   border-radius:50%;
 }
-
 </style>
 </head>
 
@@ -106,8 +105,6 @@ select, button{
 
 <h1>NYC Ballot Explorer</h1>
 <p>Select borough and district.</p>
-
-
 
 <div class="filters">
 
@@ -155,6 +152,7 @@ async function load() {
   buildDropdowns();
 }
 
+load();
 
 // ---------------------- BUILD DROPDOWNS ----------------------
 
@@ -163,14 +161,9 @@ function buildDropdowns(){
   const boroughSel = document.getElementById("borough");
   const districtSel = document.getElementById("district");
 
-  const boroughs = [
-    ...new Set(
-      data.map(d => (d.Borough || "").trim())
-    )
-  ].filter(Boolean).sort();
-
-
-    "\nBoroughs found: " + boroughs.join(", ");
+  const boroughs = [...new Set(
+    data.map(d => (d.Borough || "").trim())
+  )].filter(Boolean).sort();
 
   boroughSel.innerHTML = `<option value="">Select borough</option>`;
 
@@ -189,17 +182,11 @@ function buildDropdowns(){
       (d.Borough || "").trim() === borough
     );
 
-    const districts = [
-      ...new Set(filtered.map(d => d.district_id))
-    ]
-    .filter(Boolean)
-    .sort((a,b)=>Number(a)-Number(b));
+    const districts = [...new Set(
+      filtered.map(d => String(d.district_id || "").trim())
+    )].filter(Boolean).sort((a,b)=>Number(a)-Number(b));
 
-    
-      "\nDistricts for " + borough + ": " + districts.join(", ");
-
-    districtSel.innerHTML =
-      `<option value="">Select district</option>`;
+    districtSel.innerHTML = `<option value="">Select district</option>`;
 
     districts.forEach(d => {
       const opt = document.createElement("option");
@@ -219,10 +206,8 @@ function renderBallot(){
 
   const filtered = data.filter(d =>
     (d.Borough || "").trim() === borough &&
-    String(d.district_id) === String(district)
+    String(d.district_id).trim() === String(district)
   );
-
-  let html = `<h2>${borough} · District ${district}</h2>`;
 
   if(filtered.length === 0){
     document.getElementById("output").innerHTML =
@@ -230,11 +215,12 @@ function renderBallot(){
     return;
   }
 
+  let html = `<h2>${borough} · District ${district}</h2>`;
+
   filtered.forEach(r => {
 
     let candidates = r.candidates;
 
-    // handle stringified arrays safely
     if (typeof candidates === "string") {
       try {
         candidates = JSON.parse(candidates.replace(/'/g,'"'));
@@ -251,7 +237,7 @@ function renderBallot(){
         </div>
 
         <div class="meta">
-          ${r.district_label}
+          ${r.district_label || ""}
         </div>
 
         <span class="badge ${
@@ -285,10 +271,6 @@ function renderBallot(){
 
   document.getElementById("output").innerHTML = html;
 }
-
-// ---------------------- INIT ----------------------
-
-load();
 
 </script>
 
