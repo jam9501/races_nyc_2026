@@ -115,7 +115,7 @@ select, button{
 <h1>NYC Ballot Explorer</h1>
 <p>Select borough and district.</p>
 
-<div id="debug" class="debug">Loading...</div>
+
 
 <div class="filters">
 
@@ -173,10 +173,7 @@ async function load(){
 
     buildDropdowns();
 
-  } catch (err) {
-    document.getElementById("debug").textContent =
-      "❌ FAILED TO LOAD CSV\n\n" + err;
-  }
+  } 
 }
 
 // ---------------------- BUILD DROPDOWNS ----------------------
