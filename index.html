@@ -96,6 +96,15 @@ select, button{
   border:2px solid #111;
   border-radius:50%;
 }
+
+.debug{
+  background:#fff3cd;
+  border:1px solid #ffeeba;
+  padding:10px;
+  margin-bottom:20px;
+  font-size:13px;
+  white-space:pre-wrap;
+}
 </style>
 </head>
 
@@ -105,6 +114,8 @@ select, button{
 
 <h1>NYC Ballot Explorer</h1>
 <p>Select borough and district.</p>
+
+<div id="debug" class="debug">Loading...</div>
 
 <div class="filters">
 
@@ -144,6 +155,7 @@ async function load(){
         h.replace(/\uFEFF/g,"").trim()
     });
 
+    // HARD NORMALIZATION (fixes hidden whitespace bugs)
     data = parsed.data.map(row => {
       const clean = {};
       Object.keys(row).forEach(k => {
@@ -152,10 +164,18 @@ async function load(){
       return clean;
     });
 
+    document.getElementById("debug").textContent =
+      "CSV loaded successfully\n" +
+      "Rows: " + data.length + "\n" +
+      "Columns: " + Object.keys(data[0] || {}).join(", ") + "\n";
+
+    console.log("SAMPLE ROW:", data[0]);
+
     buildDropdowns();
 
   } catch (err) {
-    console.error("FAILED TO LOAD CSV", err);
+    document.getElementById("debug").textContent =
+      "❌ FAILED TO LOAD CSV\n\n" + err;
   }
 }
 
@@ -167,8 +187,13 @@ function buildDropdowns(){
   const districtSel = document.getElementById("district");
 
   const boroughs = [
-    ...new Set(data.map(d => (d.Borough || "").trim()))
+    ...new Set(
+      data.map(d => (d.Borough || "").trim())
+    )
   ].filter(Boolean).sort();
+
+  document.getElementById("debug").textContent +=
+    "\nBoroughs found: " + boroughs.join(", ");
 
   boroughSel.innerHTML = `<option value="">Select borough</option>`;
 
@@ -192,6 +217,9 @@ function buildDropdowns(){
     ]
     .filter(Boolean)
     .sort((a,b)=>Number(a)-Number(b));
+
+    document.getElementById("debug").textContent +=
+      "\nDistricts for " + borough + ": " + districts.join(", ");
 
     districtSel.innerHTML =
       `<option value="">Select district</option>`;
@@ -229,6 +257,7 @@ function renderBallot(){
 
     let candidates = r.candidates;
 
+    // handle stringified arrays safely
     if (typeof candidates === "string") {
       try {
         candidates = JSON.parse(candidates.replace(/'/g,'"'));
